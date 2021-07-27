@@ -9,12 +9,11 @@ resource "aws_instance" "sample" {
 provider "aws" {
   region = "us-east-1"
 }
-
 terraform {
   backend "s3" {
-    bucket = "terraform-b57"
+    bucket = "terraformbkt01"
     key    = "sample/terraform.tfstate"
     region = "us-east-1"
-    dynamodb_table = "terraform"
+    dynamodb_table = "terraformdb01"
   }
 }
